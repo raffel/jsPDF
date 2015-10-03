@@ -15634,6 +15634,7 @@ function XHR(url) {
  */
 
 html2pdf = function(html,pdf,callback) {
+  if (typeof pdf == 'undefined') return;
 	var canvas = pdf.canvas;
 	if (!canvas) {
 		alert('jsPDF canvas plugin not installed');
