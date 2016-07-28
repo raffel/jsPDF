@@ -6465,6 +6465,9 @@ var splitLongWord = function(word, widths_array, firstLineMaxLen, maxLen){
 var splitParagraphIntoLines = function(text, maxlen, options){
 	// at this time works only on Western scripts, ones with space char
 	// separating the words. Feel free to expand.
+  if (typeof maxlen == 'undefined') {
+    return [''];
+  }
 
 	if (!options) {
 		options = {}
